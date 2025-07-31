@@ -6,14 +6,13 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:14:31 by mpelage           #+#    #+#             */
-/*   Updated: 2025/07/28 13:12:37 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/07/31 13:23:35 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <cmath>
 
 // colors
