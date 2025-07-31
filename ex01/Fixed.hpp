@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:14:31 by mpelage           #+#    #+#             */
-/*   Updated: 2025/07/28 12:15:38 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/07/28 13:12:37 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 // colors
 #define BLUE_STEEL "\033[38;5;153m"
@@ -23,6 +24,7 @@
 #define BLUE_FROST "\033[38;5;116m"
 #define RESET "\033[0m"
 	
+
 class Fixed{
 	private:
 		int rawBits;
@@ -33,6 +35,8 @@ class Fixed{
 
 	public:
 		Fixed();
+		Fixed( const int raw);
+		Fixed( const float raw);
 		
 		//copie
 		Fixed( const Fixed& rhs);
@@ -44,10 +48,16 @@ class Fixed{
 		void setRawBits(int const raw);
 		//getter
 		int getRawBits(void) const;
-		
+
+		//fonction
+		float toFloat(void) const;
+		int toInt(void) const;
+
 		~Fixed();
 
 	
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 

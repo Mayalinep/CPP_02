@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:14:31 by mpelage           #+#    #+#             */
-/*   Updated: 2025/07/28 12:15:38 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/07/28 16:09:35 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 // colors
 #define BLUE_STEEL "\033[38;5;153m"
@@ -23,6 +24,7 @@
 #define BLUE_FROST "\033[38;5;116m"
 #define RESET "\033[0m"
 	
+
 class Fixed{
 	private:
 		int rawBits;
@@ -33,21 +35,52 @@ class Fixed{
 
 	public:
 		Fixed();
+		Fixed( const int raw);
+		Fixed( const float raw);
 		
 		//copie
 		Fixed( const Fixed& rhs);
 
 		//operator
 		Fixed& operator=(const Fixed& rhs);
+		bool operator<(const Fixed& rhs) const;
+		bool operator>(const Fixed& rhs) const;
+		bool operator<=(const Fixed& rhs) const;
+		bool operator>=(const Fixed& rhs) const;
+		bool operator==(const Fixed& rhs) const;
+		bool operator!=(const Fixed& rhs) const;
+		Fixed operator+(const Fixed& rhs) const;
+		Fixed operator-(const Fixed& rhs) const;
+		Fixed operator*(const Fixed& rhs) const;
+		Fixed operator/(const Fixed& rhs) const;
+
+		Fixed& operator++();
+		Fixed& operator--();
+		Fixed operator++(int);
+		Fixed operator--(int);
+
+		//min
+		static Fixed& min(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		//max
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 		
 		//setter
 		void setRawBits(int const raw);
 		//getter
 		int getRawBits(void) const;
+
+		//fonction
+		float toFloat(void) const;
+		int toInt(void) const;
 		
+
 		~Fixed();
 
 	
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 
