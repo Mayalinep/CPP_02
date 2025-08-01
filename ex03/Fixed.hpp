@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:14:31 by mpelage           #+#    #+#             */
-/*   Updated: 2025/08/01 16:19:50 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/07/31 13:23:35 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,28 +42,6 @@ class Fixed{
 
 		//operator
 		Fixed& operator=(const Fixed& rhs);
-		bool operator<(const Fixed& rhs) const;
-		bool operator>(const Fixed& rhs) const;
-		bool operator<=(const Fixed& rhs) const;
-		bool operator>=(const Fixed& rhs) const;
-		bool operator==(const Fixed& rhs) const;
-		bool operator!=(const Fixed& rhs) const;
-		Fixed operator+(const Fixed& rhs) const;
-		Fixed operator-(const Fixed& rhs) const;
-		Fixed operator*(const Fixed& rhs) const;
-		Fixed operator/(const Fixed& rhs) const;
-
-		Fixed& operator++();
-		Fixed& operator--();
-		Fixed operator++(int);
-		Fixed operator--(int);
-
-		//min
-		static Fixed& min(Fixed& a, Fixed& b);
-		static const Fixed& min(const Fixed& a, const Fixed& b);
-		//max
-		static Fixed& max(Fixed& a, Fixed& b);
-		static const Fixed& max(const Fixed& a, const Fixed& b);
 		
 		//setter
 		void setRawBits(int const raw);
@@ -73,7 +51,6 @@ class Fixed{
 		//fonction
 		float toFloat(void) const;
 		int toInt(void) const;
-		
 
 		~Fixed();
 
