@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 16:19:56 by mpelage           #+#    #+#             */
-/*   Updated: 2025/08/01 17:14:10 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/08/02 21:50:08 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int main( void ) {
 	std::cout << Fixed::max( a, b ) << std::endl;
     // std::cout << Fixed::min(a, b ) << std::endl;
     //std::cout << " b est il plus grand que a ? " << (b > a) << std::endl;
+	// std::cout << --a << std::endl;
+	// std::cout << ++a<< std::endl;
+	// std::cout << a-- << std::endl;
+	// std::cout << a << std::endl;
 	return 0;
 }
 
