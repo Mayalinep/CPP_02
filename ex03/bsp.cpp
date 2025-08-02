@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 17:45:50 by mpelage           #+#    #+#             */
-/*   Updated: 2025/08/01 18:44:06 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/08/02 15:46:27 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,14 @@ bool bsp( Point const a, Point const b, Point const c, Point const point){
     // Determinant pour CA
     Fixed det_3 = ((a.getX() - c.getX()) * (point.getY() - c.getY())) - ((a.getY() - c.getY()) * (point.getX() - c.getX()));
     
+ 
+    if (det_1 == 0 || det_2 == 0 || det_3 == 0)
+        return (false);
+    
+    
     if ((det_1 > 0 && det_2 > 0 && det_3 > 0) || (det_1 < 0 && det_2 < 0 && det_3 < 0))
         return (true);
+    
+    
     return (false);
 }

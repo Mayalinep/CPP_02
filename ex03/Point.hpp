@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 17:46:07 by mpelage           #+#    #+#             */
-/*   Updated: 2025/08/01 18:45:30 by mpelage          ###   ########.fr       */
+/*   Updated: 2025/08/02 15:38:34 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,5 @@ class Point{
         ~Point();
 
 };
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
